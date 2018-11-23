@@ -1,0 +1,49 @@
+#:kivy 1.10.1
+<EightLayout>:
+    FloatLayout:
+        TextInput:
+            id: txtin
+            size_hint: .8, .15
+            pos_hint: {'center_x':.5, 'center_y':.8}
+            text: 'type here you question, please'
+            multiline: False
+        BoxLayout:
+            orientation: 'horizontal'
+            pos_hint: {'center_x':.5, 'center_y':.66}
+            size_hint: .3, .1
+            Button:
+                id: bclear
+                text: 'clear'
+                on_press: root.clear()
+            Button:
+                id: bask
+                text: 'ask'
+                on_press: root.giveanswer()
+        ProgressBar:
+            id: pbar
+            pos_hint: {'center_x':.5, 'center_y':.5}
+            size_hint: .5, .3
+            value: 0 #root.progress
+        Label:
+            id: lanswer
+            font_size: '20sp'
+            pos_hint: {'center_x':.5, 'center_y':.4}
+            size_hint: .8, .15
+            text: ''
+        BoxLayout:
+            orientation: 'horizontal'
+            pos_hint: {'center_x':.5, 'center_y':.05}
+            size_hint: 1, .1
+            Button:
+                id: bagain
+                text: 'play again'
+                on_press: root.playagain()
+            Label:
+            Label:
+            Label:
+            Label:
+            Button:
+                id: bexit
+                text: 'exit'
+                on_press: root.close()
+        
